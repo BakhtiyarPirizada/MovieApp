@@ -37,7 +37,7 @@ final class AppCoordinator: Coordinator {
     
     fileprivate func showHome() {
         children.removeAll()
-        let homeTabBar = HomeTabBarCoordinator(navigationController: navigationController)
+        let homeTabBar = TabBarCoordinator(navigationController: navigationController)
         children.append(homeTabBar)
         homeTabBar.parentCoordinator = self
         homeTabBar.start()

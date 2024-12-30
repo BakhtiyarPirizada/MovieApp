@@ -5,12 +5,6 @@
 //  Created by Bakhtiyar Pirizada on 23.12.24.
 //
 
-//
-//  SceneDelegate.swift
-//  CoordinatorExample
-//
-//  Created by Aslanli Faqan on 13.12.24.
-//
 
 import UIKit
 
