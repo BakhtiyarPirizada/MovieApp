@@ -21,9 +21,8 @@ class HomeController: CoreController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        viewModel.type = .week
         
     }
-
-
 }
 

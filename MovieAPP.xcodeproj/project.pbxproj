@@ -209,6 +209,7 @@
 		7F06D7182D1D89AC00E09284 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7FA189AB2D22928000BCAA8F /* HomeCoordinator.swift */,
 				7F06D71B2D1D89C100E09284 /* ViewModels */,
 				7F06D71A2D1D89BB00E09284 /* Views */,
 				7F06D7192D1D89B400E09284 /* Models */,
@@ -235,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				7FA189AD2D2293BB00BCAA8F /* HomeViewModel.swift */,
-				7FA189AB2D22928000BCAA8F /* HomeCoordinator.swift */,
 				7F06D6ED2D19C86000E09284 /* HomeController.swift */,
 			);
 			path = ViewModels;
