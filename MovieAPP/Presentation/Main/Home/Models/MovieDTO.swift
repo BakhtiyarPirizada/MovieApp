@@ -59,23 +59,23 @@ struct MovieResult: Codable {
     }
 }
 
-//MARK: MovieCellProtocol
-//extension MovieResult: MovieCellProtocol {
-//    var titleString: String {
-//        if !(title?.isEmpty ?? true) {
-//            originalTitle ?? ""
-//        } else if !(name?.isEmpty ?? true) {
-//            name ?? ""
-//        } else {
-//            "Movie_title"
-//        }
-//    }
-//    
-//    var subtitleString: String {
-//        releaseDate ?? ""
-//    }
-//    
-//    var iconURL: String {
-//        imageBasePath + (posterPath ?? "")
-//    }
-//}
+    //MARK: MovieCellProtocol
+extension MovieResult: MovieCellProtocol {
+    var titleString: String {
+        if !(title?.isEmpty ?? true) {
+            originalTitle ?? ""
+        } else if !(name?.isEmpty ?? true) {
+            name ?? ""
+        } else {
+            "Movie_title"
+        }
+    }
+    
+    var subtitleString: String {
+        releaseDate ?? ""
+    }
+    
+    var iconURL: String {
+        imageBasePath + (posterPath ?? "")
+    }
+}

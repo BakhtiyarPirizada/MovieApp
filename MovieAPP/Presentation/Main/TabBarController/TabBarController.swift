@@ -17,10 +17,10 @@ final class TabBarController: UITabBarController {
     fileprivate func configureUI() {
         view.backgroundColor = .white
         tabBar.isTranslucent = false
-        tabBar.barTintColor = .white
-        tabBar.tintColor = .blue
-        tabBar.unselectedItemTintColor = .blue
-        tabBar.tintColor = .blue
+        tabBar.backgroundColor = .buttonColor2
+        tabBar.barTintColor = UIColor()
+        tabBar.unselectedItemTintColor = .fonColor8
+        tabBar.tintColor = .fonColor8
         tabBar.shadowImage = UIImage()
         tabBar.backgroundImage = UIImage()
         tabBar.layer.masksToBounds = true

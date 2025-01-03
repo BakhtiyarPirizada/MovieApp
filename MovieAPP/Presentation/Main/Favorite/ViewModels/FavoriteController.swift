@@ -17,5 +17,6 @@ final class FavoriteController:CoreController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .fonColor9
     }
 }
