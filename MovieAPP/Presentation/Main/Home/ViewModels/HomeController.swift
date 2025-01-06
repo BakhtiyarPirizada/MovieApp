@@ -54,7 +54,7 @@ final class HomeController: CoreController {
     override func configureView() {
         view.addSubViews(loadingView,collectionView)
         configureCompositionalLayout()
-        view.backgroundColor = .fon
+        view.backgroundColor = .white
     }
     
     override func configureConstraint() {
@@ -73,7 +73,7 @@ final class HomeController: CoreController {
                         self.loadingView.stopAnimating()
                         self.refreshControl.endRefreshing()
                     case .success:
-                        self.collectionView.reloadSections(.init(arrayLiteral: 1))
+                    self.collectionView.reloadData()
                     case .error(let error):
                         self.showMessage(title: "Xeta", message: error)
                 }
@@ -84,9 +84,6 @@ final class HomeController: CoreController {
     @objc
     private func reloadPage() {
         viewModel.type = .day
-        viewModel.getPopularMovie()
-        viewModel.getUpcomingMovie()
-        viewModel.getNowPlayingMovie()
     }
 }
 
@@ -110,6 +107,10 @@ extension HomeController {
 extension HomeController: UICollectionViewDelegate,
                           UICollectionViewDataSource,
                           UICollectionViewDelegateFlowLayout {
+    func numberOfSections(
+        in collectionView: UICollectionView
+    ) -> Int { 5 }
+    
     
     func collectionView(
         _ collectionView: UICollectionView,
@@ -120,14 +121,11 @@ extension HomeController: UICollectionViewDelegate,
             case 2 : return viewModel.getPopularCount()
             case 3 : return viewModel.getUpcomingCount()
             case 4 : return viewModel.getNowPlayingCount()
-            default: return 1
+            default: return 5
             }
         }
     
-    func numberOfSections(
-        in collectionView: UICollectionView
-    ) -> Int { 5 }
-    
+  
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

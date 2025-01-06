@@ -5,9 +5,16 @@
 //  Created by Bakhtiyar Pirizada on 06.01.25.
 //
 
+//
+//  NowPlayingDTO.swift
+//  MoovieeAPP
+//
+//  Created by Javidan on 27.12.24.
+//
+
 import Foundation
 
-// MARK: - MovieDTO
+// MARK: - NowPlayingDTO
 struct NowPlayingDTO: Codable {
     let dates: NowPlayingDates
     let page: Int
@@ -29,7 +36,7 @@ struct NowPlayingDates: Codable {
 // MARK: - Result
 struct NowPlayingResult: Codable {
     let adult: Bool
-    let backdropPath: String
+    let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
     let originalLanguage: String
@@ -54,9 +61,13 @@ struct NowPlayingResult: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
+}
+
+
+
     private var imageBasePath = "https://image.tmdb.org/t/p/w500"
 
-}
+
 
 extension NowPlayingResult: MovieCellProtocol {
     var titleString: String {

@@ -47,6 +47,15 @@
 		7FCD110A2D2C0F85000B331B /* PopularDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11092D2C0F7B000B331B /* PopularDTO.swift */; };
 		7FCD110C2D2C0F91000B331B /* NowPlayingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD110B2D2C0F88000B331B /* NowPlayingDTO.swift */; };
 		7FCD110E2D2C0FAF000B331B /* UpcomingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD110D2D2C0F98000B331B /* UpcomingDTO.swift */; };
+		7FCD11122D2C2EFE000B331B /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11112D2C2EEF000B331B /* RegisterController.swift */; };
+		7FCD11142D2C2FA4000B331B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11132D2C2F9F000B331B /* LoginController.swift */; };
+		7FCD11182D2C3028000B331B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11172D2C3022000B331B /* RegisterViewModel.swift */; };
+		7FCD111A2D2C3032000B331B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11192D2C302C000B331B /* LoginViewModel.swift */; };
+		7FCD111C2D2C310B000B331B /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD111B2D2C3105000B331B /* RegisterCoordinator.swift */; };
+		7FCD11202D2C32AE000B331B /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD111F2D2C32A5000B331B /* ReusableButton.swift */; };
+		7FCD11222D2C32C5000B331B /* ReusableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11212D2C32BF000B331B /* ReusableText.swift */; };
+		7FCD11242D2C32CF000B331B /* ReusableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11232D2C32C9000B331B /* ReusableLabel.swift */; };
+		7FCD11262D2C3DDC000B331B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FCD11252D2C3DDC000B331B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +100,15 @@
 		7FCD11092D2C0F7B000B331B /* PopularDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDTO.swift; sourceTree = "<group>"; };
 		7FCD110B2D2C0F88000B331B /* NowPlayingDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingDTO.swift; sourceTree = "<group>"; };
 		7FCD110D2D2C0F98000B331B /* UpcomingDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingDTO.swift; sourceTree = "<group>"; };
+		7FCD11112D2C2EEF000B331B /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		7FCD11132D2C2F9F000B331B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		7FCD11172D2C3022000B331B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		7FCD11192D2C302C000B331B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7FCD111B2D2C3105000B331B /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		7FCD111F2D2C32A5000B331B /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
+		7FCD11212D2C32BF000B331B /* ReusableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableText.swift; sourceTree = "<group>"; };
+		7FCD11232D2C32C9000B331B /* ReusableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLabel.swift; sourceTree = "<group>"; };
+		7FCD11252D2C3DDC000B331B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,7 @@
 			children = (
 				7F06D6EE2D19C86000E09284 /* MovieAPP */,
 				7F06D6EA2D19C86000E09284 /* Info.plist */,
+				7FCD11252D2C3DDC000B331B /* GoogleService-Info.plist */,
 				7F06D6CE2D19C58400E09284 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -170,17 +189,10 @@
 			isa = PBXGroup;
 			children = (
 				7F06D6FB2D19C96F00E09284 /* Core */,
-				7F06D6F82D19C8BC00E09284 /* Auth */,
+				7FCD11102D2C2ED9000B331B /* Auth */,
 				7F06D6F92D19C8C600E09284 /* Main */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		7F06D6F82D19C8BC00E09284 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		7F06D6F92D19C8C600E09284 /* Main */ = {
@@ -196,8 +208,8 @@
 		7F06D6FA2D19C8E000E09284 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7F06D7122D1D894000E09284 /* LayoutExtension.swift */,
-				7F06D7102D1D892300E09284 /* Extension.swift */,
+				7FCD111E2D2C3226000B331B /* Extensions */,
+				7FCD111D2D2C3216000B331B /* ReusableElements */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -352,6 +364,53 @@
 			path = Upcoming;
 			sourceTree = "<group>";
 		};
+		7FCD11102D2C2ED9000B331B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7FCD11162D2C3005000B331B /* RegisterViewModule */,
+				7FCD11152D2C2FE1000B331B /* LoginViewModule */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		7FCD11152D2C2FE1000B331B /* LoginViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				7FCD11192D2C302C000B331B /* LoginViewModel.swift */,
+				7FCD11132D2C2F9F000B331B /* LoginController.swift */,
+			);
+			path = LoginViewModule;
+			sourceTree = "<group>";
+		};
+		7FCD11162D2C3005000B331B /* RegisterViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				7FCD111B2D2C3105000B331B /* RegisterCoordinator.swift */,
+				7FCD11172D2C3022000B331B /* RegisterViewModel.swift */,
+				7FCD11112D2C2EEF000B331B /* RegisterController.swift */,
+			);
+			path = RegisterViewModule;
+			sourceTree = "<group>";
+		};
+		7FCD111D2D2C3216000B331B /* ReusableElements */ = {
+			isa = PBXGroup;
+			children = (
+				7FCD11232D2C32C9000B331B /* ReusableLabel.swift */,
+				7FCD11212D2C32BF000B331B /* ReusableText.swift */,
+				7FCD111F2D2C32A5000B331B /* ReusableButton.swift */,
+			);
+			path = ReusableElements;
+			sourceTree = "<group>";
+		};
+		7FCD111E2D2C3226000B331B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F06D7122D1D894000E09284 /* LayoutExtension.swift */,
+				7F06D7102D1D892300E09284 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +478,7 @@
 			files = (
 				7F06D6EF2D19C86000E09284 /* Assets.xcassets in Resources */,
 				7F06D6F12D19C86000E09284 /* LaunchScreen.storyboard in Resources */,
+				7FCD11262D2C3DDC000B331B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,19 +491,25 @@
 			files = (
 				7FA189AE2D2293C400BCAA8F /* HomeViewModel.swift in Sources */,
 				7F06D6F22D19C86000E09284 /* AppDelegate.swift in Sources */,
+				7FCD11242D2C32CF000B331B /* ReusableLabel.swift in Sources */,
 				7FCD11002D2C0D32000B331B /* PopularAPIService.swift in Sources */,
 				7FA189C12D2806DA00BCAA8F /* HomeCollectionLayout.swift in Sources */,
 				7FCD10F82D2C0CF5000B331B /* UpcomingUseCase.swift in Sources */,
+				7FCD111A2D2C3032000B331B /* LoginViewModel.swift in Sources */,
 				7FCD110C2D2C0F91000B331B /* NowPlayingDTO.swift in Sources */,
 				7F06D71F2D1D8A2200E09284 /* TabBarController.swift in Sources */,
 				7F06D71D2D1D89D300E09284 /* MovieDTO.swift in Sources */,
 				7F06D7002D19CABB00E09284 /* CoreErrorModel.swift in Sources */,
 				7FCD11022D2C0D3C000B331B /* PopularHelper.swift in Sources */,
+				7FCD11122D2C2EFE000B331B /* RegisterController.swift in Sources */,
+				7FCD11182D2C3028000B331B /* RegisterViewModel.swift in Sources */,
 				7FCD11082D2C0D54000B331B /* NowPlayingUseCase.swift in Sources */,
 				7FCD10FA2D2C0D06000B331B /* UpcomingAPIService.swift in Sources */,
 				7F06D70D2D1D87B300E09284 /* TrendingAPIService.swift in Sources */,
 				7FA189B82D22981000BCAA8F /* FavoriteController.swift in Sources */,
+				7FCD111C2D2C310B000B331B /* RegisterCoordinator.swift in Sources */,
 				7FA189B42D2297FD00BCAA8F /* FavoriteViewModel.swift in Sources */,
+				7FCD11142D2C2FA4000B331B /* LoginController.swift in Sources */,
 				7FCD110A2D2C0F85000B331B /* PopularDTO.swift in Sources */,
 				7FA189BE2D27F02300BCAA8F /* TrandingSectionCell.swift in Sources */,
 				7FCD11062D2C0D45000B331B /* NowPlayingAPIService.swift in Sources */,
@@ -457,12 +523,14 @@
 				7FCD110E2D2C0FAF000B331B /* UpcomingDTO.swift in Sources */,
 				7FA189AC2D22928600BCAA8F /* HomeCoordinator.swift in Sources */,
 				7FCD10FE2D2C0D26000B331B /* PopularUseCase.swift in Sources */,
+				7FCD11222D2C32C5000B331B /* ReusableText.swift in Sources */,
 				7FA189B62D22980700BCAA8F /* FavoriteCoordinator.swift in Sources */,
 				7FA189BC2D27F00900BCAA8F /* MovieCell.swift in Sources */,
 				7FCD10FC2D2C0D19000B331B /* UpcomingHelper.swift in Sources */,
 				7F06D6F42D19C86000E09284 /* HomeController.swift in Sources */,
 				7F06D7112D1D892800E09284 /* Extension.swift in Sources */,
 				7F06D7092D1D878500E09284 /* TrendingHelper.swift in Sources */,
+				7FCD11202D2C32AE000B331B /* ReusableButton.swift in Sources */,
 				7F06D70B2D1D87A500E09284 /* TrendingUseCase.swift in Sources */,
 				7F06D7042D1D86C300E09284 /* Coordinator.swift in Sources */,
 				7F06D7132D1D894600E09284 /* LayoutExtension.swift in Sources */,

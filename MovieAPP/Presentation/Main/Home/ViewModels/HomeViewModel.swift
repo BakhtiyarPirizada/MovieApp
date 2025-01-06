@@ -60,7 +60,7 @@ final class HomeViewModel {
                 requestCallBack?(.loaded)
                 if let dto = dto {
                     movieDto = dto
-                    requestCallBack?(.success)
+                    getNowPlayingMovie()
                 } else if let error = error {
                     requestCallBack?(.error(error))
               }
@@ -82,7 +82,7 @@ final class HomeViewModel {
                requestCallBack?(.loaded)
                if let dto = dto {
                    nowPlayingDTo = dto
-                   requestCallBack?(.success)
+                   getPopularMovie()
                } else if let error = error {
                    requestCallBack?(.error(error))
             }
@@ -104,7 +104,7 @@ final class HomeViewModel {
                requestCallBack?(.loaded)
                if let dto = dto {
                    popularDTO = dto
-                   requestCallBack?(.success)
+                   getUpcomingMovie()
                } else if let error = error {
                    requestCallBack?(.error(error))
              }
@@ -121,11 +121,11 @@ final class HomeViewModel {
     }
     func getUpcomingMovie() {
         requestCallBack?(.loading)
-        popularUse.getPopularMovies { [weak self] dto, error in
+        upcomingUse.getUpcomingMovies { [weak self] dto, error in
                guard let self = self else {return}
                requestCallBack?(.loaded)
                if let dto = dto {
-                   popularDTO = dto
+                   UpcomingDTO = dto
                    requestCallBack?(.success)
                } else if let error = error {
                    requestCallBack?(.error(error))
