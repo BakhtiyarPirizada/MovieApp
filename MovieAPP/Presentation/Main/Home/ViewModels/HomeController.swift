@@ -72,7 +72,7 @@ final class HomeController: CoreController {
                     case .loaded:
                         self.loadingView.stopAnimating()
                         self.refreshControl.endRefreshing()
-                    case .successTranding:
+                    case .success:
                         self.collectionView.reloadSections(.init(arrayLiteral: 1))
                     case .error(let error):
                         self.showMessage(title: "Xeta", message: error)
@@ -84,6 +84,9 @@ final class HomeController: CoreController {
     @objc
     private func reloadPage() {
         viewModel.type = .day
+        viewModel.getPopularMovie()
+        viewModel.getUpcomingMovie()
+        viewModel.getNowPlayingMovie()
     }
 }
 
@@ -112,35 +115,62 @@ extension HomeController: UICollectionViewDelegate,
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
             switch section {
-                case 0: return 1
-                case 1 : return viewModel.getTrandingCount()
-                default: return 1
+            case 0: return 1
+            case 1 : return viewModel.getTrandingCount()
+            case 2 : return viewModel.getPopularCount()
+            case 3 : return viewModel.getUpcomingCount()
+            case 4 : return viewModel.getNowPlayingCount()
+            default: return 1
             }
         }
     
     func numberOfSections(
         in collectionView: UICollectionView
-    ) -> Int { 4 }
+    ) -> Int { 5 }
     
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             switch indexPath.section {
-                case 0:
-                    let cell: TrandingSectionCell = collectionView.dequeue(for: indexPath)
-                    cell.delegate = self
-                    return cell
-                case 1:
-                    let cell: MovieCell = collectionView.dequeue(for: indexPath)
-                    guard let item = viewModel
-                        .getTrandingMovie(index: indexPath.item) else {
-                        return UICollectionViewCell()
-                    }
-                    cell.configureCell(model: item)
-                    return cell
-                default:
-                    let cell: MovieCell = collectionView.dequeue(for: indexPath)
-                    return cell
+            case 0:
+                let cell: TrandingSectionCell = collectionView.dequeue(for: indexPath)
+                cell.delegate = self
+                return cell
+            case 1:
+                let cell: MovieCell = collectionView.dequeue(for: indexPath)
+                guard let item = viewModel
+                    .getTrandingMovie(index: indexPath.item) else {
+                    return UICollectionViewCell()
+                }
+                cell.configureCell(model: item)
+                return cell
+            case 2:
+                let cell: MovieCell = collectionView.dequeue(for: indexPath)
+                guard let item = viewModel
+                    .getPopularMovie(index: indexPath.item) else {
+                    return UICollectionViewCell()
+                }
+                cell.configureCell(model: item)
+                return cell
+            case 3:
+                let cell: MovieCell = collectionView.dequeue(for: indexPath)
+                guard let item = viewModel
+                    .getUpcomingMovie(index: indexPath.item) else {
+                    return UICollectionViewCell()
+                }
+                cell.configureCell(model: item)
+                return cell
+            case 4:
+                let cell: MovieCell = collectionView.dequeue(for: indexPath)
+                guard let item = viewModel
+                    .getNowPlayingMovie(index: indexPath.item) else {
+                    return UICollectionViewCell()
+                }
+                cell.configureCell(model: item)
+                return cell
+            default:
+                let cell: MovieCell = collectionView.dequeue(for: indexPath)
+                return cell
             }
         }
     
