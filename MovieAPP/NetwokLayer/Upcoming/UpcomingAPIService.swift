@@ -13,7 +13,7 @@ final class UpcomingAPIService: UpcomingUseCase {
             type: UpcomingDTO.self,
             url: UpcomingHelper.upcoming.endPoint,
             method: .GET) { [weak self] result in
-                guard let self = self else {return}
+                guard let _ = self else {return}
                 switch result {
                 case .success(let data):
                     completion(data, nil)
