@@ -28,6 +28,7 @@ extension Coordinator {
     
     func showController(vc: UIViewController) {
         navigationController.show(vc, sender: nil)
+      //  navigationController.setNavigationBarHidden(true, animated: true)
     }
 }
 

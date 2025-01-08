@@ -17,11 +17,13 @@ final class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
     
    
-    var isLogin: Bool = true
+    var isLogin = UserDefaults.standard.bool(forKey: "islogin")
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+    deinit {
+        print(#function)
+    }
     func start() {
         if isLogin {
             showHome()
@@ -32,7 +34,10 @@ final class AppCoordinator: Coordinator {
     
     fileprivate func showAuth() {
         children.removeAll()
-
+        let coordinator = AuthCoordinator(navigationController: navigationController)
+        children.append(coordinator)
+        coordinator.parentCoordinator = self
+        coordinator.start()
     }
     
     fileprivate func showHome() {

@@ -176,6 +176,7 @@ extension HomeController: UICollectionViewDelegate,
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath) {
             print(#function, indexPath.section, indexPath.item)
+            UserDefaults.standard.set(false, forKey: "islogin")
         }
     
 }
@@ -184,5 +185,6 @@ extension HomeController: TrandingSectionCellProtocol {
     func didClickSegment(index: Int) {
         viewModel.type = index == 0 ? .day : .week
         print(#function, index)
+        UserDefaults.standard.set(false, forKey: "islogin")
     }
 }

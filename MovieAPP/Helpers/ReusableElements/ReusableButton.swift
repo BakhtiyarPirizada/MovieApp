@@ -6,41 +6,28 @@
 //
 
 import UIKit
-
-
-class ReusableButton: UIButton {
-    private var title: String = ""
-    private var buttonColor: UIColor
-    private var onAction: () -> Void
-    
-    
-    init(title: String, buttonColor: UIColor, onAction: @escaping () -> Void) {
+final class ReusableButton: UIButton {
+    private var title:String
+    private var action : ()->Void
+    init(title: String, action: @escaping () -> Void) {
         self.title = title
-        self.onAction = onAction
-        self.buttonColor = buttonColor
+        self.action = action
         super.init(frame: .zero)
-        setupUI()
+        configureUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-
     }
-    
-    func setupUI() {
+    func configureUI() {
         setTitle(title, for: .normal)
-        setTitleColor(.white, for: .normal)
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = buttonColor
-        layer.cornerRadius = 10
-        layer.borderWidth = 1
-        layer.borderColor = buttonColor.cgColor
-        
+        titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        titleLabel?.textColor = .white
+        backgroundColor = .buttonColor1
         addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-        
+        layer.cornerRadius = 12
     }
-    
-    @objc func buttonClicked(){
-        onAction()
+    @objc private func buttonClicked() {
+        action()
     }
 }

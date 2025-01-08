@@ -27,6 +27,9 @@
 		7F06D71D2D1D89D300E09284 /* MovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D71C2D1D89CD00E09284 /* MovieDTO.swift */; };
 		7F06D71F2D1D8A2200E09284 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D71E2D1D8A1900E09284 /* TabBarController.swift */; };
 		7F06D7212D1D8A2D00E09284 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D7202D1D8A2500E09284 /* TabBarCoordinator.swift */; };
+		7F471E022D2D9252002FA49E /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F471E012D2D9249002FA49E /* AuthCoordinator.swift */; };
+		7F471E042D2DA744002FA49E /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F471E032D2DA73D002FA49E /* FirebaseHelper.swift */; };
+		7F4A40282D2C5AC100018084 /* AuthNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A40272D2C5ABC00018084 /* AuthNavigation.swift */; };
 		7FA189AC2D22928600BCAA8F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA189AB2D22928000BCAA8F /* HomeCoordinator.swift */; };
 		7FA189AE2D2293C400BCAA8F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA189AD2D2293BB00BCAA8F /* HomeViewModel.swift */; };
 		7FA189B42D2297FD00BCAA8F /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA189B32D2297F100BCAA8F /* FavoriteViewModel.swift */; };
@@ -51,7 +54,6 @@
 		7FCD11142D2C2FA4000B331B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11132D2C2F9F000B331B /* LoginController.swift */; };
 		7FCD11182D2C3028000B331B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11172D2C3022000B331B /* RegisterViewModel.swift */; };
 		7FCD111A2D2C3032000B331B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11192D2C302C000B331B /* LoginViewModel.swift */; };
-		7FCD111C2D2C310B000B331B /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD111B2D2C3105000B331B /* RegisterCoordinator.swift */; };
 		7FCD11202D2C32AE000B331B /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD111F2D2C32A5000B331B /* ReusableButton.swift */; };
 		7FCD11222D2C32C5000B331B /* ReusableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11212D2C32BF000B331B /* ReusableText.swift */; };
 		7FCD11242D2C32CF000B331B /* ReusableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD11232D2C32C9000B331B /* ReusableLabel.swift */; };
@@ -83,6 +85,9 @@
 		7F06D71C2D1D89CD00E09284 /* MovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDTO.swift; sourceTree = "<group>"; };
 		7F06D71E2D1D8A1900E09284 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7F06D7202D1D8A2500E09284 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		7F471E012D2D9249002FA49E /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		7F471E032D2DA73D002FA49E /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		7F4A40272D2C5ABC00018084 /* AuthNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigation.swift; sourceTree = "<group>"; };
 		7FA189AB2D22928000BCAA8F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7FA189AD2D2293BB00BCAA8F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7FA189B32D2297F100BCAA8F /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
@@ -107,7 +112,6 @@
 		7FCD11132D2C2F9F000B331B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		7FCD11172D2C3022000B331B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		7FCD11192D2C302C000B331B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		7FCD111B2D2C3105000B331B /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		7FCD111F2D2C32A5000B331B /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
 		7FCD11212D2C32BF000B331B /* ReusableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableText.swift; sourceTree = "<group>"; };
 		7FCD11232D2C32C9000B331B /* ReusableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLabel.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		7F06D6FA2D19C8E000E09284 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7F471E032D2DA73D002FA49E /* FirebaseHelper.swift */,
 				7FCD111E2D2C3226000B331B /* Extensions */,
 				7FCD111D2D2C3216000B331B /* ReusableElements */,
 			);
@@ -278,9 +283,9 @@
 		7F06D7182D1D89AC00E09284 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7FA189AB2D22928000BCAA8F /* HomeCoordinator.swift */,
 				7FA189BF2D2806C700BCAA8F /* Layouts */,
 				7FA189BA2D27EFF500BCAA8F /* Views */,
-				7FA189AB2D22928000BCAA8F /* HomeCoordinator.swift */,
 				7F06D71B2D1D89C100E09284 /* ViewModels */,
 				7F06D71A2D1D89BB00E09284 /* Views */,
 				7F06D7192D1D89B400E09284 /* Models */,
@@ -391,6 +396,8 @@
 		7FCD11102D2C2ED9000B331B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				7F471E012D2D9249002FA49E /* AuthCoordinator.swift */,
+				7F4A40272D2C5ABC00018084 /* AuthNavigation.swift */,
 				7FCD11162D2C3005000B331B /* RegisterViewModule */,
 				7FCD11152D2C2FE1000B331B /* LoginViewModule */,
 			);
@@ -409,7 +416,6 @@
 		7FCD11162D2C3005000B331B /* RegisterViewModule */ = {
 			isa = PBXGroup;
 			children = (
-				7FCD111B2D2C3105000B331B /* RegisterCoordinator.swift */,
 				7FCD11172D2C3022000B331B /* RegisterViewModel.swift */,
 				7FCD11112D2C2EEF000B331B /* RegisterController.swift */,
 			);
@@ -570,15 +576,16 @@
 				7F06D7002D19CABB00E09284 /* CoreErrorModel.swift in Sources */,
 				7FCD11022D2C0D3C000B331B /* PopularHelper.swift in Sources */,
 				7FCD11122D2C2EFE000B331B /* RegisterController.swift in Sources */,
+				7F471E042D2DA744002FA49E /* FirebaseHelper.swift in Sources */,
 				7FCD11182D2C3028000B331B /* RegisterViewModel.swift in Sources */,
 				7FCD11082D2C0D54000B331B /* NowPlayingUseCase.swift in Sources */,
 				7FCD10FA2D2C0D06000B331B /* UpcomingAPIService.swift in Sources */,
 				7F06D70D2D1D87B300E09284 /* TrendingAPIService.swift in Sources */,
 				7FA189B82D22981000BCAA8F /* FavoriteController.swift in Sources */,
-				7FCD111C2D2C310B000B331B /* RegisterCoordinator.swift in Sources */,
 				7FA189B42D2297FD00BCAA8F /* FavoriteViewModel.swift in Sources */,
 				7FCD11142D2C2FA4000B331B /* LoginController.swift in Sources */,
 				7FCD110A2D2C0F85000B331B /* PopularDTO.swift in Sources */,
+				7F471E022D2D9252002FA49E /* AuthCoordinator.swift in Sources */,
 				7FA189BE2D27F02300BCAA8F /* TrandingSectionCell.swift in Sources */,
 				7FCD11062D2C0D45000B331B /* NowPlayingAPIService.swift in Sources */,
 				7F06D7212D1D8A2D00E09284 /* TabBarCoordinator.swift in Sources */,
@@ -602,6 +609,7 @@
 				7F06D70B2D1D87A500E09284 /* TrendingUseCase.swift in Sources */,
 				7F06D7042D1D86C300E09284 /* Coordinator.swift in Sources */,
 				7F06D7132D1D894600E09284 /* LayoutExtension.swift in Sources */,
+				7F4A40282D2C5AC100018084 /* AuthNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

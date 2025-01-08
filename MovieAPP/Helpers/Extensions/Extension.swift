@@ -149,7 +149,13 @@ extension UICollectionView {
     }
 }
 
-
+extension  UITextField {
+    func setLeftPadding(_ amount: CGFloat) {
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: frame.height))
+            self.leftView = paddingView
+            self.leftViewMode = .always
+        }
+}
 extension UIViewController {
     func showMessage(
         title: String = "",
@@ -163,6 +169,11 @@ extension UIViewController {
         )
         alert.addAction(UIAlertAction(title: actionTitle, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    func gestureRecognizer(to view: UIView, action: Selector) {
+        let tapGesture = UITapGestureRecognizer(target: self, action: action)
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tapGesture)
     }
 }
 
@@ -204,6 +215,14 @@ extension UIImageView {
         self.sd_setImage(with: url)
     }
 }
+extension UIViewController {
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+}
 
 extension UIEdgeInsets {
     // Initialize UIEdgeInsets with equal padding for all sides
@@ -225,4 +244,5 @@ extension UIEdgeInsets {
     public init(top: CGFloat = 0, x: CGFloat, bottom: CGFloat = 0) {
         self = .init(top: top, left: x, bottom: bottom, right: -x)
     }
+    
 }

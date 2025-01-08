@@ -28,12 +28,12 @@ final class CoreAPIManager {
         if !body.isEmpty {
             let bodyData = try? JSONSerialization.data(withJSONObject: body, options: [])
             request.httpBody = bodyData
-            print("body: \(String(data: try! JSONSerialization.data(withJSONObject: body, options: .prettyPrinted), encoding: .utf8)!)")
+            //print("body: \(String(data: try! JSONSerialization.data(withJSONObject: body, options: .prettyPrinted), encoding: .utf8)!)")
         }
         
         
         request.allHTTPHeaderFields = header
-        print("header: \(header)")
+        //print("header: \(header)")
         
         let dataTask = session.dataTask(with: request) { [weak self] data, response, error in
             let statusCode = (response as! HTTPURLResponse).statusCode
@@ -66,7 +66,7 @@ final class CoreAPIManager {
     ) {
         do {
             let response = try JSONDecoder().decode(T.self, from: data)
-            print("Response:",response)
+           // print("Response:",response)
             completion(.success(response))
         }
         catch {
